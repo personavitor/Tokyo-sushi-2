@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Pagamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      text-align: center;
+      width: 90%;
+    }
+    #payment-form {
+      width: 90%; /* largura relativa */
+      max-width: 400px; /* largura máxima */
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    #submit {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #submit:hover {
+      background-color: #45a049;
+    }
+    #error-message {
+      color: #ff0000;
+      margin-top: 10px;
+    }
+    .payment-info {
+      text-align: center;
+    }
+    .security-seal {
+      margin-right: 20px;
+    }
+
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 600px) {
+      #payment-form {
+        width: 90%; /* largura total */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <form id="payment-form">
+    <div class="form-group">
+      <label for="name">Nome Completo:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Telefone:</label>
+      <input type="tel" id="phone" name="phone" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(99) 99999-9999" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div id="card-element" class="form-group"><!-- Elemento para o cartão do usuário --></div>
+
+    <button id="submit">
+      Pagar agora
+    </button>
+
+    <div id="error-message"><!-- Usado para exibir mensagens de erro --></div>
+  </form>
+
+  <div class="payment-info">
+    <img src="security-seal.png" alt="Selo de Segurança" class="security-seal">
+    Aceitamos pagamentos via: 
+    <img src="pix-logo.png" alt="PIX" style="margin: 0 10px;">
+    <img src="card-logo.png" alt="Cartão" style="margin: 0 10px;">
+    <img src="cash-logo.png" alt="Dinheiro" style="margin: 0 10px;">
+  </div>
+</div>
+
+<!-- Adicione aqui seu script para integrar com a API de pagamento -->
+
+</body>
+</html>

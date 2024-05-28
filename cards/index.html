@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <h2 style="text-align:center;">YAKISOBA</h2>
+    <div class="container">
+        
+        <div class="card" id="salmão">
+            <h3>Sashimi Kani</h3>
+            <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$26,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('Sashimi kani', 26.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+            <h3>Sashimi camarão</h3>
+            <img src="salmão.jpg" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$32,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('Sashini camarão', 32.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+          <h3>Sashimi salmão flambado</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$32,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Sashimi salmão flambado', 32.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>Sashimi salmão empanado</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$34,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Sashimi salmão empanado', 34.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+        <!-- Repita este bloco para cada item da lista -->
+    </div>
+    <hr>
+    <h2 style="text-align:center;">ESPECIAIS</h2>
+    <div class="container">
+        
+        <div class="card" id="salmão">
+            <h3>Empanado de salmão (8 unidades) </h3>
+            <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$28,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('Empanado de salmão', 28.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+            <h3>Ceviche(Unidade)</h3>
+            <img src="salmão.jpg" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$44,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('Ceviche', 44.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+          <h3>Tempurá de camarão flambado</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$32,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Tempurá de camarão flambado', 32.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>Acarajapa (4 Unidades)</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$29,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Acarajapa', 29.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+        <!-- Repita este bloco para cada item da lista -->
+    </div>
+    
+    <hr>
+    <h2 style="text-align:center;">COMBINADOS</h2>
+    <div class="container">
+        
+        <div class="card" id="salmão">
+            <h3>YOKOHAMA(25 peças)</h3>
+            <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$59,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('YOKOHAMA', 59.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+            <h3>HIROSHIMA(34 peças)</h3>
+            <img src="salmão.jpg" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Deliciosos sushis de salmão fresco.</p>
+              <p class="price">R$79,99</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('HIROSHIMA', 79.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+          <h3>NAGASAKI(42 peças)</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$89,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('NAGASAKI', 89.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>KYOTO(68 peças)</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$199,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('KYOTO', 199.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+        <!-- Repita este bloco para cada item da lista -->
+    </div>
+    <hr>
+    
+    <h2 style="text-align:center;">BEBIDAS</h2>
+    <div class="container">
+        
+        <div class="card" id="salmão">
+            <h3>COCA COLA</h3>
+            <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>Lata 310ml</p>
+              <p class="price">R$6,00</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('Coca cola', 5.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+            <h3>GUARANÁ</h3>
+            <img src="salmão.jpg" alt="Sushi de salmão">
+            <div class="card-info">
+              <p>lata 350ml</p>
+              <p class="price">R$6,00</p>
+              <button class="adicionarpedido" onclick="adicionarAoPedido('GUARANÁ', 5.99)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        <div class="card" id="salmão">
+          <h3>FANTA LARANJA</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Lata 350ml</p>
+            <p class="price">R$6,00</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('FANTA LARANJA', 5.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>FANTA UVA</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Lata 350ml</p>
+          <p class="price">R$6,00</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('FANTA UVA', 5.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>COCA COLA ZERO</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 310ml</p>
+        <p class="price">R$6,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('COCA COLA ZERO', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SPRITE</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 350ml</p>
+        <p class="price">R$6,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SPRITE', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>MATE COLA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Garrafa 250ml</p>
+        <p class="price">R$3,50</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('MATE COLA', 3.50)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>H2O</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>500ml sabor limão</p>
+        <p class="price">R$6,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('H2O', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO BONBON SABOR UVA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 350ml</p>
+        <p class="price">R$16,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO BONBON SABOR UVA', 16.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SCHWEPPS TÔNICO</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 350ml</p>
+        <p class="price">R$5,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SCHWEPPS TÔNICO', 4.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SCHWEPPS CITRUS</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 350ml</p>
+        <p class="price">R6,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SCHWEPPS CITRUS', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>AGUA MINERAL SEM GÁS</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>500ml</p>
+        <p class="price">R$3,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('AGUA MINERAL SEM GÁS', 2.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>AGUA MINERAL COM GÁS</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Lata 500ml</p>
+        <p class="price">R$5,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('AGUA MINERAL COM GÁS', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>CERVEJA CORONA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>LONG NECK</p>
+        <p class="price">R$10,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido(' CERVEJA CORONA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>CERVEJA BUDWEISER</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>LONG NECK</p>
+        <p class="price">R$10,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('CERVEJA BUDWEISER', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>CERVEJA STELLA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>LONG NECK</p>
+        <p class="price">R$10,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('CERVEJA STELLA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>HEINEKEN</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>LONG NECK</p>
+        <p class="price">R$10,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('HEINEKEN', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE ABACAXI</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE ABACAXI', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div><div class="card" id="salmão">
+      <h3>SUCO NATURAL DE ABACAXI C HORTELÃ</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE ABACAXI C HORTELÃ', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE ACEROLA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE ACEROLA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div><div class="card" id="salmão">
+      <h3>SUCO NATURAL DE GRAVIOLA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE GRAVIOLA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE GOIABA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE GOIABA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE LARANJA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE LARANJA', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE MARACUJÁ</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE MARACUJÁ', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO NATURAL DE MORANGO</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$9,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO NATURAL DE MORANGO', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>SUCO DE LARANJA COM MORANGO</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>400ml</p>
+        <p class="price">R$5,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SUCO DE LARANJA COM MORANGO', 9.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>ÁGUA TÔNICA</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>LATA DE 350ml</p>
+        <p class="price">R$6,00</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Sushi de salmão', 5.99)">Adicionar ao Pedido</button>
+      </div>
+    </div>
+
+
+</body>
+</html>

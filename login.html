@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            margin: 0 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        input, button {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-question {
+            font-size: 0.8em;
+        }
+
+        #registerLink {
+            font-size: 0.8em;
+            text-decoration: none;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .registerForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+           <div>Ainda não cadastrado ?<a href="cadastro.html">Clique aqui</a></div> 
+        </form>
+        
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var email = document.getElementById("loginEmail").value;
+            var password = document.getElementById("loginPassword").value;
+            // Aqui você pode enviar os dados para o back-end para autenticar o usuário
+        });
+
+        document.getElementById("registerLink").addEventListener("click", function(event){
+            event.preventDefault();
+            var registerForm = document.getElementById("registerForm");
+            registerForm.style.display = "block";
+        });
+
+        document.getElementById("registerForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var name = document.getElementById("registerName").value;
+            var email = document.getElementById("registerEmail").value;
+            var phone = document.getElementById("registerPhone").value;
+            var password = document.getElementById("registerPassword").value;
+            // Aqui você pode enviar os dados para o back-end para cadastrar o usuário
+        });
+    </script>
+</body>
+</html>

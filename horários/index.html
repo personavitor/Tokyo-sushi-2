@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi XY</title>
+ 
+ <style>
+    div{
+display: inline-block;
+
+    }
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 40px; /* Defina o tamanho do botão */
+  height: 40px; /* Defina o tamanho do botão */
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: darkgreen; /* Cor do botão quando hover */
+}
+
+button.open {
+  background-color: green; /* Cor do botão quando aberto */
+}
+
+button.closed {
+  background-color: red; /* Cor do botão quando fechado */
+}
+
+
+ </style>
+</head>
+<body>
+  <h1>Sushi XY</h1>
+
+
+  <button id="toggleButton" onclick="toggleStatus()"></button>
+  <p id="statusMessage">Status: Fechado</p>
+
+
+ <script>
+function toggleStatus() {
+  const button = document.getElementById('toggleButton');
+  const statusMessage = document.getElementById('statusMessage');
+
+  const now = new Date();
+  const currentHour = now.getHours();
+
+  if (currentHour >= 5 && currentHour <= 23) { // Se estiver entre 18h e 23h
+    button.classList.remove('closed');
+    button.classList.add('open');
+    statusMessage.innerText = 'Status: Aberto';
+  } else {
+    button.classList.remove('open');
+    button.classList.add('closed');
+    statusMessage.innerText = 'Status: Fechado. Abrirá às 18h.';
+  }
+}
+
+// Chamar a função quando a página carregar para inicializar o estado do botão
+toggleStatus();
+
+
+
+ </script>
+</body>
+</html>
+

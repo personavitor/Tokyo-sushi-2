@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            margin: 0 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        input, button {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-question {
+            font-size: 0.8em;
+        }
+
+        #loginLink {
+            font-size: 0.8em;
+            text-decoration: none;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="registerForm">
+            <h2>Cadastro</h2>
+            <input type="text" id="registerName" placeholder="Nome" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="tel" id="registerPhone" placeholder="Telefone" required>
+            <input type="password" id="registerPassword" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+            <p class="register-question">Já tem uma conta? <a href="login.html" id="loginLink">Faça login</a></p>
+        </form>
+    </div>
+
+    <script>
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita o envio do formulário
+
+  const name = document.getElementById('registerName').value;
+  const email = document.getElementById('registerEmail').value;
+  const phone = document.getElementById('registerPhone').value;
+  const password = document.getElementById('registerPassword').value;
+
+  // Objeto com os dados do usuário
+  const userData = {
+    name: name,
+    email: email,
+    phone: phone,
+    password: password
+  };
+
+  // Envia os dados do usuário para o backend
+  fetch('tokyo sushi 2/cadastrar usuários.mysql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Erro ao cadastrar usuário');
+    }
+  })
+  .then(data => {
+    console.log('Usuário cadastrado com sucesso:', data);
+    // Redireciona para a página de login ou faz qualquer outra ação necessária após o cadastro
+    window.location.href = 'login.html';
+  })
+  .catch(error => {
+    console.error('Erro:', error.message);
+    // Exibe uma mensagem de erro para o usuário
+    alert('Erro ao cadastrar usuário. Tente novamente mais tarde.');
+  });
+});
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const mysql = require('mysql');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware para analisar corpos de solicitação JSON
+app.use(bodyParser.json());
+
+// Configuração do banco de dados MySQL
+const connection = mysql.createConnection({
+    host: 'localhost', // Endereço do servidor MySQL
+    user: 'seu_usuario', // Seu nome de usuário do MySQL
+    password: 'sua_senha', // Sua senha do MySQL
+    database: 'sua_base_de_dados' // Nome do banco de dados que você deseja usar
+});
+
+// Conecta ao banco de dados MySQL
+connection.connect((err) => {
+    if (err) {
+        console.error('Erro ao conectar ao banco de dados:', err);
+    } else {
+        console.log('Conexão bem-sucedida ao banco de dados MySQL');
+    }
+});
+
+// Rota para lidar com o cadastro de usuários
+app.post('/cadastrar', (req, res) => {
+    const userData = req.body; // Dados do usuário enviados pelo formulário
+
+    // Insere os dados do usuário no banco de dados
+    connection.query('INSERT INTO usuarios SET ?', userData, (err, results) => {
+        if (err) {
+            console.error('Erro ao cadastrar usuário no banco de dados:', err);
+            res.status(500).json({ error: 'Erro ao cadastrar usuário' });
+        } else {
+            console.log('Usuário cadastrado com sucesso:', results);
+            res.status(200).json({ message: 'Usuário cadastrado com sucesso' });
+        }
+    });
+});
+
+// Inicia o servidor
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+
+    </script>
+</body>
+</html>

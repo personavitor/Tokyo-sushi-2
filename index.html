@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery de Sushi</title>
+  <link rel="stylesheet" href="styles.css">
+
+  
+<style>
+.menu {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Estilos do menu para dispositivos móveis */
+    .navbar {
+      background-color: black;
+      color: #fcfafa;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .navbar ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .navbar ul li a {
+      color: #f8f4f4;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    .navbar ul li a:hover {
+      color: green;
+    }
+
+    /* Estilos do ícone do menu para dispositivos móveis */
+    #menu-icon {
+      display: none; /* Inicialmente oculto em telas maiores */
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 768px) {
+      /* Quando a largura da tela é menor que 768px (tamanhos de tela móvel) */
+      .navbar ul {
+        display: none; /* Oculta o menu de navegação */
+        position: absolute;
+        top: 50px; /* Ajuste conforme necessário */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+      }
+      .navbar ul.show {
+        display: block; /* Exibe o menu de navegação quando a classe 'show' está presente */
+      }
+      .navbar ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+      }
+      #menu-icon {
+        display: block; /* Exibe o ícone do menu */
+        position: absolute;
+        top: 10px;
+        right: 10px; /* Posiciona o ícone no canto superior direito */
+        z-index: 999; /* Garante que o ícone do menu esteja acima de outros elementos */
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+</style>
+ 
+</head>
+<body>
+  <div class="menu">
+    <div class="navbar">
+<img  class="logo" src="imagens/LOGOTOKYOSUSHI.png" alt="">
+
+        <ul>
+          
+          <li><a href="#promocoes"><img  style="width: 30px;" src="imagens/promocao.png" alt="">Promoção do dia</a></li>
+
+      <!--<a href="https://www.flaticon.com/br/icones-gratis/perfil" title="perfil ícones">Perfil ícones criados por Pixel perfect - Flaticon</a>-->
+          <li><a href="login.html"><img style="width: 30px;"  src="imagens/perfil.png" alt="">Login</a></li>
+          
+        </ul>
+          <!-- Ícone do menu para dispositivos móveis -->
+          <div id="menu-icon">&#9776;</div>
+      </div>
+      </div>
+  
+
+    
+    <!-- Carrossel de imagens -->
+    <div class="carousel">
+      <img src="imagens/AdobeStock_105942165_Preview.jpeg" alt="Imagem 1">
+      <img src="imagens/AdobeStock_135237184_Preview.jpeg" alt="Imagem 2">
+      <img src="imagens/AdobeStock_272231028_Preview.jpeg" alt="Imagem 3">
+      <img src="imagens/AdobeStock_678953191_Preview.jpeg" alt="Imagem 4">
+    </div>
+ 
+  
+  <div class="textoinfinito">
+    <span class="text">&#x1F60B;<strong>Hummmm que vontade de comer sushi!</strong>&#x1F60B;</span>
+  </div>
+  
+  
+ 
+  <h2 style="text-align:center;">Sashimi (8 Peças)</h2>
+<div class="container">
+  <div class="card" id="salmão">
+    <h3>Sashimi salmão</h3>
+    <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$32,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Sashimi Salmão', 32.99)">Adicionar ao Pedido</button>
+    </div>
+</div>
+    <div class="card" id="salmão">
+        <h3>Sashimi Kani</h3>
+        <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$28,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Sashimi Kani', 26.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+        <h3>Sashimi camarão</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$32,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('sashimi camarão', 32.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>Sashimi salmão flambado</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$32,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Sachimi salmão flambado', 32.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Sashimi salmão empanado</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$34,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Sachimi salmão empanado', 34.99)">Adicionar ao Pedido</button>
+    </div>
+</div>
+    <!-- Repita este bloco para cada item da lista -->
+</div>
+
+<hr>
+<h2 style="text-align:center;">Joe (4 Peças)</h2>
+<div class="container">
+    
+    <div class="card" id="salmão">
+        <h3>Joe salmão</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$26,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Joe salmão', 26.99)">Adicionar ao Pedido</button>
+        </div>
+    </div> <div class="card" id="salmão">
+      <h3>Joe geléia de maracujá</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$26,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Joe geléia de maracujá', 26.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  
+  <div class="card" id="salmão">
+    <h3>Joe geléia de pimenta</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$26,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Joe geléia de pimenta', 26.99)">Adicionar ao Pedido</button>
+    </div>
+</div>
+
+<div class="card" id="salmão">
+  <h3>Joe salmão flambado</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$29,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Joe salmão flambado', 29.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+
+<div class="card" id="salmão">
+  <h3>Joe cheese e poró</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$28,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Joe cheese e poró', 28.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+
+<div class="card" id="salmão">
+  <h3>joe EBI</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$23,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Joe EBI', 23.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+
+    <!-- Repita este bloco para cada item da lista -->
+</div>
+
+<hr>
+<h2 style="text-align:center;">Niguiri (4 Peças)</h2>
+<div class="container">
+    
+    <div class="card" id="salmão">
+        <h3>Niguiri salmão</h3>
+        <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$24,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri salmão', 24.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+        <h3>Niguiri camarão</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$26,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri camarão', 26.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>Niguiri kani</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$21,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri kani', 21.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Niguiri salmão flambado</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$34,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri salmão flambado', 34.99)">Adicionar ao Pedido</button>
+    </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Niguiri peixe empanado</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$24,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri peixe empanado', 24.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Niguiri skin</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$22,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Niguiri skin', 22.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+    <!-- Repita este bloco para cada item da lista -->
+</div>
+<hr>
+<h2 style="text-align:center;">Maki (8 Peças)</h2>
+<div class="container">
+    
+    <div class="card" id="salmão">
+        <h3> Maki salmão</h3>
+        <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$26,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Maki salmão', 26.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+        <h3>Maki salmão grelhado</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$32,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Maki salmão grelhado', 32.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>Maki camarão</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$32,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Maki camarão', 32.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Maki camarão empanado</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$34,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Maki camarão empanado', 34.99)">Adicionar ao Pedido</button>
+    </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Maki filadélfia</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$34,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Maki filadéfia', 34.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Maki Kani</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$34,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Maki kani', 34.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Maki peixe empanado</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$34,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Maki peixe empanado', 34.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Maki skin</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$34,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Maki skin', 34.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+    <!-- Repita este bloco para cada item da lista -->
+</div>
+<hr>
+<h2 style="text-align:center;">Uramaki (8 Peças)</h2>
+<div class="container">
+    
+    <div class="card" id="salmão">
+        <h3>Uramaki salmão</h3>
+        <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$28,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('uramaki salmão', 28.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+        <h3>Uramaki filadéfia</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$28,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki filadéfia', 28.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+   
+    <div class="card" id="salmão">
+      <h3>Uramaki grelhado</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$28,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki grelhado', 28.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Uramaki kani</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$22,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki kani', 22.99)">Adicionar ao Pedido</button>
+    </div>
+</div><div class="card" id="salmão">
+  <h3>Uramaki camarão</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$29,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki camarão', 29.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Uramaki camarão empanado</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$31,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki camarão empanado', 31.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Uramaki mexicano</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$29,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki mexicano', 29.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+<div class="card" id="salmão">
+  <h3>Uramaki skin lemon</h3>
+  <img src="salmão.jpg" alt="Sushi de salmão">
+  <div class="card-info">
+    <p>Deliciosos sushis de salmão fresco.</p>
+    <p class="price">R$26,99</p>
+    <button class="adicionarpedido" onclick="adicionarAoPedido('Uramaki skin lemon', 26.99)">Adicionar ao Pedido</button>
+  </div>
+</div>
+    <!-- Repita este bloco para cada item da lista -->
+</div>
+<hr>
+<h2 style="text-align:center;">Temaki (1 Unidade)</h2>
+  <div class="container">
+      
+      <div class="card" id="salmão">
+          <h3>Temaki filadélfia</h3>
+          <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$29,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Temaki filadéfia', 29.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+          <h3>Temaki camarão</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$34,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Temaki camarão', 34.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>Temaki salmão</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$29,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Temaki salmão', 29.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>Temaki hot</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$32,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('Temaki hot', 32.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Temaki salmão grelhado</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$32,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Temaki salmão grelhado', 32.99)">Adicionar ao Pedido</button>
+    </div>
+  </div>
+      <!-- Repita este bloco para cada item da lista -->
+  </div>
+  <hr>
+  
+  <h2 style="text-align:center;">Hot (8 Peças)</h2>
+  <div class="container">
+      
+      <div class="card" id="salmão">
+          <h3>Hot salmão</h3>
+          <img src="teste.png-Photoroom.png" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$26,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Hot salmão', 26.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+          <h3>Hot filadélfia</h3>
+          <img src="salmão.jpg" alt="Sushi de salmão">
+          <div class="card-info">
+            <p>Deliciosos sushis de salmão fresco.</p>
+            <p class="price">R$28,99</p>
+            <button class="adicionarpedido" onclick="adicionarAoPedido('Hot filadélfia', 28.99)">Adicionar ao Pedido</button>
+          </div>
+      </div>
+      <div class="card" id="salmão">
+        <h3>Hot camarão</h3>
+        <img src="salmão.jpg" alt="Sushi de salmão">
+        <div class="card-info">
+          <p>Deliciosos sushis de salmão fresco.</p>
+          <p class="price">R$28,99</p>
+          <button class="adicionarpedido" onclick="adicionarAoPedido('Hot camarão', 28.99)">Adicionar ao Pedido</button>
+        </div>
+    </div>
+    <div class="card" id="salmão">
+      <h3>Hot holl</h3>
+      <img src="salmão.jpg" alt="Sushi de salmão">
+      <div class="card-info">
+        <p>Deliciosos sushis de salmão fresco.</p>
+        <p class="price">R$39,99</p>
+        <button class="adicionarpedido" onclick="adicionarAoPedido('SHot holl', 39.99)">Adicionar ao Pedido</button>
+      </div>
+  </div>
+  <div class="card" id="salmão">
+    <h3>Big Hot holl</h3>
+    <img src="salmão.jpg" alt="Sushi de salmão">
+    <div class="card-info">
+      <p>Deliciosos sushis de salmão fresco.</p>
+      <p class="price">R$44,99</p>
+      <button class="adicionarpedido" onclick="adicionarAoPedido('Big hot holl', 44.99)">Adicionar ao Pedido</button>
+    </div>
+  </div>
+      <!-- Repita este bloco para cada item da lista -->
+  </div>
+  
+  <hr>
+  
+
+
+<!--Total dos pedidos-->
+    </section>
+    <section id="pedido">
+      <h2 class="seupedido">Seu Pedido</h2>
+      <div id="pedido-lista"></div>
+      <p id="total">Total: R$0,00</p>
+      
+     
+    </section>
+  </main>
+  
+  
+
+    
+  <nav>
+   <a href="#topo"><img style="width: 30px; " id="voltar-ao-topo" src="imagens/upload_7455925.png" alt=""></a>
+   
+      <li id="total-menu">Total: R$0,00</li> 
+       <button id="finalizar-pedido" onclick="finalizarPedido()"><strong>Finalizar</strong></button>
+  
+     
+  </nav>
+  
+ 
+  <script src="script.js"></script>
+</body>
+</html>
